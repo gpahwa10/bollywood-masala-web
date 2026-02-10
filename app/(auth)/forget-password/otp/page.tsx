@@ -34,7 +34,7 @@ export default function OtpPage() {
                     <Image src="/images/logo.svg" alt="logo" width={60} height={100} className="object-cover" />
                     <h1 className="text-5xl font-bold text-center text-black">Verify Your Code</h1>
                     <p className="text-center text-[#666666] text-base font-medium">
-                    Enter your registered email address we’ll send you an OTP to reset password
+                    Enter your registered email address we'll send you an OTP to reset password
                     </p>
                 </div>
 
