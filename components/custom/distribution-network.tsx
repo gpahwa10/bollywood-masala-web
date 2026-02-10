@@ -84,10 +84,10 @@ const DistributionNetwork = () => {
         },
     ];
     return (
-        <div className="flex flex-col gap-2 bg-white rounded-lg p-6 my-4">
-            <h1 className="text-2xl font-bold text-black">Global Distribution Network</h1>
-            <h4 className="text-md font-regular text-[#666666]">Over 500 Million Devices Worldwide</h4>
-            <div className="grid w-full grid-cols-7 gap-4">
+        <div className="flex flex-col gap-2 bg-white rounded-lg p-4 sm:p-5 md:p-6 my-4 overflow-hidden">
+            <h1 className="text-xl sm:text-2xl font-bold text-black">Global Distribution Network</h1>
+            <h4 className="text-sm sm:text-base font-regular text-[#666666]">Over 500 Million Devices Worldwide</h4>
+            <div className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-3 sm:gap-4">
                 {
                     networks.map((network) => (
                         <NetworkCard key={network.name} image={network.image} name={network.name} />

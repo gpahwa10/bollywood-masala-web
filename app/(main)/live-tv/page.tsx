@@ -27,7 +27,7 @@ const LiveTvPage = () => {
               <span className="h-2 w-2 rounded-full bg-[#DF3234]" />
               LIVE
             </span>
-            <span className="text-xl font-medium">
+            <span className="text-xl font-medium lg:text-lg sm:text-base">
               Shraddha Kapoor, Sonakshi Sinha-Zaheer Iqbal, Suniel Shetty, Dhanush & others SPOTTED in city
             </span>
           </div>

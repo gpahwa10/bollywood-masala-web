@@ -41,17 +41,17 @@ const page = () => {
     return (
         <div className='flex flex-col gap-4'>
             <div className='flex flex-col gap-2'>
-                <h1 className='text-3xl font-bold'>Choose the plan that's right for you</h1>
-                <p className='text-lg text-[#666666] font-medium'>Join Bollywoodmasala and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!</p>
+                <h1 className='text-xl sm:text-2xl md:text-3xl font-bold'>Choose the plan that's right for you</h1>
+                <p className='text-sm sm:text-base text-[#666666] font-medium'>Join Bollywoodmasala and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!</p>
             </div>
-            <div className='flex flex-row gap-4'>
-                <div className='flex flex-col items-start bg-white rounded-lg p-4 w-full mx-auto border border-1 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='flex flex-col items-start bg-white rounded-lg p-3 sm:p-4 w-full mx-auto border border-1 gap-4 sm:gap-6'>
                     <Image src='/icons/crown-dark.svg' alt='Basic' width={24} height={24} className='object-contain' />
-                    <h1 className='text-xl font-bold'>6 Months Plan</h1>
-                    <p className='text-lg text-[#666666] font-medium'>Get 6‑month access to a vast selection of movies and shows, including all new releases and Offline Viewing.</p>
-                    <h3 className='text-3xl font-bold text-[#DF3234]'>₹100</h3>
-                    <div className='flex flex-row w-full gap-2'>
-                        <button className='text-black px-4 py-2 rounded-lg h-10 border border-1 border-[#DF3234] w-full'>Start Free Trial</button>
+                    <h1 className='text-lg sm:text-xl font-bold'>6 Months Plan</h1>
+                    <p className='text-base sm:text-lg text-[#666666] font-medium'>Get 6‑month access to a vast selection of movies and shows, including all new releases and Offline Viewing.</p>
+                    <h3 className='text-2xl sm:text-3xl font-bold text-[#DF3234]'>₹100</h3>
+                    <div className='flex flex-col lg:flex-row w-full gap-2'>
+                        <button className='text-black px-4 py-2 → px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg h-10 border border-1 border-[#DF3234] w-full'>Start Free Trial</button>
                         <div
                             className="w-full rounded-md p-[1px]"
                             style={{
@@ -70,13 +70,13 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-start bg-white rounded-lg p-4 w-full mx-auto border border-1 gap-6'>
+                <div className='flex flex-col items-start bg-white rounded-lg p-3 sm:p-4 w-full mx-auto border border-1 gap-4 sm:gap-6'>
                     <Image src='/icons/crown-dark.svg' alt='Basic' width={24} height={24} className='object-contain' />
-                    <h1 className='text-xl font-bold'>Annual Plan</h1>
-                    <p className='text-lg text-[#666666] font-medium'>Get 12‑month access to a vast selection of movies and shows, including all new releases and Offline Viewing.</p>
-                    <h3 className='text-3xl font-bold text-[#DF3234]'>₹150</h3>
-                    <div className='flex flex-row w-full gap-2'>
-                        <button className='text-black px-4 py-2 rounded-lg h-10 border border-1 border-[#DF3234] w-full'>Start Free Trial</button>
+                    <h1 className='text-lg sm:text-xl font-bold'>Annual Plan</h1>
+                    <p className='text-base sm:text-lg text-[#666666] font-medium'>Get 12‑month access to a vast selection of movies and shows, including all new releases and Offline Viewing.</p>
+                    <h3 className='text-2xl sm:text-3xl font-bold text-[#DF3234]'>₹150</h3>
+                    <div className='flex flex-col lg:flex-row w-full gap-2'>
+                        <button className='text-black px-4 py-2 → px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg h-10 border border-1 border-[#DF3234] w-full'>Start Free Trial</button>
                         <div
                             className="w-full rounded-md p-[1px]"
                             style={{
@@ -100,25 +100,29 @@ const page = () => {
                 <h1 className='text-3xl font-bold'>Compare our plans and find the right one for you</h1>
                 <p className='text-lg text-[#666666] font-medium'>Bollywoodmasala offers three different plans to fit your needs: Basic, Standard, and Premium. Compare the features of each plan and choose the one that's right for you.</p>
             </div>
-            <Table className="w-full rounded-[10px] border border-[#262626] overflow-hidden mt-8 mb-4">
+            <div className="w-full overflow-x-auto mt-6 mb-4">
+                <div className="rounded-[10px] overflow-hidden border border-[#262626] min-w-[640px]">
+                    <Table className="w-full">
                 <TableHeader className="bg-black text-white">
                     <TableRow>
-                        <TableHead className="w-[100px] text-white p-6">Features</TableHead>
-                        <TableHead className="text-white p-6">Free Plan</TableHead>
-                        <TableHead className="text-white p-6">Subscription Plan <span className='bg-[#FFCC80] rounded-xs px-2 py-1 text-black text-sm font-medium'>Best Value</span></TableHead>
+                        <TableHead className="w-[100px] text-white p-3 sm:p-4 rounded-tl-[10px]">Features</TableHead>
+                        <TableHead className="text-white p-3 sm:p-4">Free Plan</TableHead>
+                        <TableHead className="text-white p-3 sm:p-4 rounded-tr-[10px]">Subscription Plan <span className='bg-[#FFCC80] rounded-xs px-2 py-1 text-black text-sm font-medium'>Best Value</span></TableHead>
                     </TableRow>
                 </TableHeader>
 
                 <TableBody className="bg-white text-md text-[#666666] font-medium">
-                    {featureTable.map((feature) => (
+                    {featureTable.map((feature, index) => (
                         <TableRow key={feature.feature}>
-                            <TableCell className="font-medium p-6">{feature.feature}</TableCell>
-                            <TableCell className="p-6">{feature.freePlan}</TableCell>
-                            <TableCell className="p-6">{feature.subscriptionPlan}</TableCell>
+                            <TableCell className={`font-medium p-3 sm:p-4 ${index === featureTable.length - 1 ? "rounded-bl-[10px]" : ""}`}>{feature.feature}</TableCell>
+                            <TableCell className="p-3 sm:p-4">{feature.freePlan}</TableCell>
+                            <TableCell className={`p-3 sm:p-4 ${index === featureTable.length - 1 ? "rounded-br-[10px]" : ""}`}>{feature.subscriptionPlan}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
-            </Table>
+                    </Table>
+                </div>
+            </div>
 
 
         </div>

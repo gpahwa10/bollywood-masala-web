@@ -6,24 +6,24 @@ const page = () => {
         <div>
 
             <div className='flex flex-col gap-1'>
-                <h1 className='text-3xl font-bold'>Darshan italiya</h1>
-                <h4 className='text-lg text-[#666666] font-medium'>Signed in as demo****@gmail.com</h4>
+                <h1 className='text-xl sm:text-2xl md:text-3xl font-bold'>Darshan italiya</h1>
+                <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-medium'>Signed in as demo****@gmail.com</h4>
             </div>
             <Separator />
             <div className='flex flex-col gap-1'>
-                <h1 className='text-2xl font-bold'>Your account</h1>
-                <h4 className='text-lg text-[#666666] font-medium'>You sign in to Bollywoodmasala with your Google Account</h4>
+                <h1 className='text-xl sm:text-2xl md:text-3xl font-bold'>Your account</h1>
+                <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-medium'>You sign in to Bollywoodmasala with your Google Account</h4>
             </div>
             <Separator />
             <div className='flex flex-col gap-1'>
                 <h1 className='text-xl font-medium'>Personal Details</h1>
-                <div className='flex flex-row gap-4 mb-4'>
+                <div className='flex flex-col lg:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4 min-w-0'>
                     <div className='flex flex-col gap-1 flex-1'>
                         <h1 className='text-lg font-medium'>Full Name</h1>
                         <input
                             type="text"
                             placeholder="Darshan italiya"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
 
@@ -32,7 +32,7 @@ const page = () => {
                         <input
                             type="email"
                             placeholder="demo****@gmail.com"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                     <div className='flex flex-col gap-1 flex-1'>
@@ -40,7 +40,7 @@ const page = () => {
                         <input
                             type="tel"
                             placeholder="1234567890"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
 
@@ -55,7 +55,7 @@ const page = () => {
                         <input
                             type="text"
                             placeholder="Address line 1"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                     <div className='flex flex-col gap-1'>
@@ -63,7 +63,7 @@ const page = () => {
                         <input
                             type="text"
                             placeholder="Address line 2"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                     <div className='flex flex-col gap-1'>
@@ -71,7 +71,7 @@ const page = () => {
                         <input
                             type="text"
                             placeholder="City"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                     <div className='flex flex-col gap-1'>
@@ -79,7 +79,7 @@ const page = () => {
                         <input
                             type="text"
                             placeholder="State"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                     <div className='flex flex-col gap-1'>
@@ -87,7 +87,7 @@ const page = () => {
                         <input
                             type="text"
                             placeholder="Country"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                     <div className='flex flex-col gap-1'>
@@ -96,7 +96,7 @@ const page = () => {
                             type="text"
                             inputMode="numeric"
                             placeholder="Pincode"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-5 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
                         />
                     </div>
                 </div>
@@ -106,45 +106,49 @@ const page = () => {
                         style={{
                             background: 'linear-gradient(96.15deg, #531416 9.79%, #DB3130 53.74%, #531416 97.69%)',
                         }}
-                        className="rounded-[8px] border border-[#19191926] px-6 py-3 text-lg font-semibold text-white transition-colors hover:bg-gray-50"
+                        className="rounded-[8px] border border-[#19191926] w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white transition-colors hover:bg-gray-50"
                     >
                         Save Details
                     </button>
                 </div>
             </div>
             <Separator />
-            <div className='flex flex-row w-full justify-between'>
+            <div className='flex flex-col lg:flex-row gap-3 md:items-center md:justify-between'>
                 <h2 className='text-lg font-medium'>Memberships</h2>
                 <div className='flex flex-col gap-1'>
-                    <span className='text-base text-black font-medium'>No Membership | <Link href="/subscription"><span className='text-primary font-medium underline text-base cursor-pointer'>Get BollywoodMasala Premium</span></Link></span>
-                    <span className='text-base text-[#666666] font-medium'>Premium offers uninterrupted music, ad-free videos, and more</span>
+                    <span className='text-sm sm:text-base text-black font-medium'>No Membership | <Link href="/subscription"><span className='text-primary font-medium underline text-sm sm:text-base cursor-pointer'>Get BollywoodMasala Premium</span></Link></span>
+                    <span className='text-sm sm:text-base text-[#666666] font-medium'>Premium offers uninterrupted music, ad-free videos, and more</span>
                 </div>
             </div>
             <Separator />
-            <div className='flex flex-col gap-2 mb-4'>
-                <h2 className='text-2xl font-medium'>About Us</h2>
-                <p className='text-base text-[#666666] font-medium'>Bollywoodmasala is your trusted destination for Bollywood news, live channels, exclusive reports, and verified entertainment updates. We connect fans with real‑time stories straight from the industry.</p>
+            <div className="flex flex-col gap-2 sm:gap-3 mb-4 min-w-0">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-medium shrink-0">About Us</h2>
+                <p className="text-sm sm:text-base text-[#666666] font-medium min-w-0 break-words">
+                    Bollywoodmasala is your trusted destination for Bollywood news, live channels, exclusive reports, and verified entertainment updates. We connect fans with real‑time stories straight from the industry.
+                </p>
             </div>
-            <div className='flex flex-row max-w-4xl w-full justify-between mb-4'>
-                <h2 className='text-lg font-medium'>Legal</h2>
-                <div className='flex flex-col gap-1'>
-                    <Link href="/terms-conditions"><span className='text-primary font-medium underline text-base cursor-pointer'>Terms & Conditions</span>                    </Link>
-                    <Link href="/privacy-policy"><span className='text-primary font-medium underline text-base cursor-pointer'>Privacy Policy</span>                    </Link>
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 min-w-0">
+                <h2 className="text-base sm:text-lg font-medium shrink-0">Legal</h2>
+                <div className="flex flex-col gap-2 min-w-0">
+                    <Link href="/terms-conditions" className="text-primary font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
+                        Terms & Conditions
+                    </Link>
+                    <Link href="/privacy-policy" className="text-primary font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
+                        Privacy Policy
+                    </Link>
                 </div>
             </div>
-            <div className='flex flex-row max-w-5xl w-full justify-between mb-4'>
-                <h2 className='text-lg font-medium'>Contact</h2>
-                <div className='flex flex-col gap-1'>
-                    <span>
-                        <span>Email:</span>
-                        <span className='text-[#666666] font-medium text-base cursor-pointer'>support@bollywoodmasala.com</span>
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 min-w-0">
+                <h2 className="text-base sm:text-lg font-medium shrink-0">Contact</h2>
+                <div className="flex flex-col gap-2 min-w-0">
+                    <span className="flex flex-col gap-0.5 text-sm sm:text-base min-w-0 break-words">
+                        <span className="font-medium text-black shrink-0">Email:</span>
+                        <span className="text-[#666666] font-medium cursor-pointer">support@bollywoodmasala.com</span>
                     </span>
-                
-                    <span>
-                        <span className='text-black font-medium text-base'>Phone:</span>
-                        <span className='text-[#666666] font-medium text-base'>+91 980 000 0000</span>
+                    <span className="flex flex-col gap-0.5 text-sm sm:text-base min-w-0">
+                        <span className="font-medium text-black shrink-0">Phone:</span>
+                        <span className="text-[#666666] font-medium">+91 980 000 0000</span>
                     </span>
-
                 </div>
             </div>
         </div>

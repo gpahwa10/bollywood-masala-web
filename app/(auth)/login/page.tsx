@@ -1,9 +1,18 @@
+"use client"
 import Link from 'next/link'
 import Image from 'next/image'
 import { LockKeyhole, UserRound } from 'lucide-react'
+import { useRouter } from 'next/navigation' 
 const page = () => {
+    const router = useRouter()
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        router.push("/")
+    }
+
     return (
-        <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white">
+        <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-4 sm:px-6">
             <Image
                 src="/images/logo.svg"
                 alt="logo"
@@ -12,14 +21,17 @@ const page = () => {
                 className="absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 object-cover opacity-30"
             />
             <div
-                className="flex flex-col items-center justify-center z-10 max-w-[530px] w-full h-auto bg-white px-[26px] py-[24px] rounded-2xl gap-6 backdrop-blur-[4px] shadow-[0px_0px_114px_0px_#0000003D]"
+                className="flex flex-col items-center justify-center z-10 max-w-[530px] w-full h-auto bg-white px-5 sm:px-7 py-6 sm:py-7 rounded-2xl gap-5 sm:gap-6 backdrop-blur-[4px] shadow-[0px_0px_114px_0px_#0000003D]"
             >
-                <div className='flex flex-row items-center justify-center gap-6'>
+                <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
                     <Image src="/images/logo.svg" alt="logo" width={60} height={100} className='object-cover' />
-                    <h1 className='text-5xl font-bold text-center text-black'>Login</h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black">Login</h1>
                 </div>
 
-                <form className="flex flex-col items-center justify-center gap-6 w-full max-w-sm">
+                <form
+                    className="flex flex-col items-center justify-center gap-5 sm:gap-6 w-full max-w-sm"
+                    onSubmit={handleSubmit}
+                >
                     {/* Email */}
                     <div className='relative w-full'>
                         <input

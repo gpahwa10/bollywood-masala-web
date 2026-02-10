@@ -35,10 +35,10 @@ const AppSidebar = () => {
                 borderImage: "linear-gradient(180.66deg, rgba(0, 0, 0, 0) -3.55%, #FFFFFF 13.91%, #AEAEAE 26.74%, rgba(0, 0, 0, 0) 145.4%) 1",
             }}
         >
-            {/* Collapsible Toggle Button */}
+            {/* Collapsible Toggle Button - desktop only; on mobile sidebar opens via header trigger */}
             <Button
                 onClick={toggleSidebar}
-                className="absolute -right-3 top-20 z-50 h-8 w-8 rounded-full border-2 border-gray-200 bg-white p-0 shadow-md hover:bg-gray-50 transition-all duration-200"
+                className="absolute -right-3 top-20 z-50 h-8 w-8 rounded-full border-2 border-gray-200 bg-white p-0 shadow-md hover:bg-gray-50 transition-all duration-200 hidden md:flex"
                 variant="ghost"
             >
                 {state === "expanded" ? (
