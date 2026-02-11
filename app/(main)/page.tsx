@@ -3,7 +3,7 @@ import { HeroCarousel } from "@/components/custom/hero-carousel";
 
 export default function Home() {
   return <div>
-      {/* <HeroCarousel /> */}
+      <HeroCarousel />
     <Categories />
   </div>;
 }
