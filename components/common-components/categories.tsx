@@ -20,7 +20,7 @@ const Categories = () => {
                             <div className="relative w-full aspect-[260/83] min-h-0 overflow-hidden rounded-md">
                                 <Image src={category.image} alt={category.title} width={260} height={83} className="w-full h-full object-cover" />
                             </div>
-                            <div className="bg-[#F5F5F5] px-3 py-2 sm:px-4 rounded-md text-center min-w-0 max-h-[64px] my-auto">
+                            <div className="bg-[#F5F5F5] px-3 py-2 sm:px-3 rounded-md text-center min-w-0 max-h-[64px] my-auto">
                                 <h3 className="text-sm sm:text-base md:text-lg  line-clamp-2">{category.title}</h3>
                             </div>
                         </div>

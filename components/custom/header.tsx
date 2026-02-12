@@ -49,7 +49,7 @@ const Header = () => {
   {/* LEFT */}
   <div className="flex flex-row items-center gap-2 min-w-0">
     <SidebarTrigger className="lg:hidden shrink-0" />
-    <h1 className="text-xl sm:text-2xl md:text-3xl font-bold truncate">
+    <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate">
       {title}
     </h1>
   </div>
@@ -58,7 +58,7 @@ const Header = () => {
   <div className="flex flex-row items-center gap-2 sm:gap-3 lg:gap-4 min-w-0">
     
     {/* SEARCH */}
-    <div className="flex flex-row items-center gap-2 bg-white rounded-lg p-2 min-w-0 flex-1 lg:flex-initial lg:min-w-[240px]">
+    <div className="flex flex-row items-center gap-4 bg-white rounded-lg p-2 min-w-0 flex-1 lg:flex-initial lg:min-w-[240px]">
       <Search className="w-4 h-4 shrink-0" />
       <Input
         type="text"
@@ -117,7 +117,10 @@ const Header = () => {
             type="button"
             className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             role="menuitem"
-            onClick={() => setIsUserMenuOpen(false)}
+            onClick={() => {
+              setIsUserMenuOpen(false)
+              router.push("/login")
+            }}
           >
             Sign out
           </button>

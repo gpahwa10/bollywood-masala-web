@@ -27,7 +27,7 @@ const UploadedVideoCard = () => {
                 </span>
                 <span className="text-sm sm:text-base md:text-lg text-gray-500">Bollywoodmasala</span>
                 <span className="flex flex-row flex-wrap gap-2 items-center text-gray-500 text-sm sm:text-base">
-                    3 views <span className="w-2 h-2 bg-gray-200 rounded-full shrink-0" aria-hidden /> 21 hours ago
+                    21 hours ago
                 </span>
             </div>
         </div>

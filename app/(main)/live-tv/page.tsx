@@ -1,5 +1,5 @@
 import React from "react";
-import { ThumbsUp, Share2, Plus } from "lucide-react";
+import { ThumbsUp, Share2, Plus, ThumbsDown, MessageSquarePlus } from "lucide-react";
 import Image from "next/image";
 
 const LiveTvPage = () => {
@@ -40,6 +40,13 @@ const LiveTvPage = () => {
             </button>
             <button
               type="button"
+              className="flex items-center gap-1 text-sm font-medium text-[#DF3234]"
+            >
+              <ThumbsDown className="h-5 w-5" />
+            </button>
+
+            <button
+              type="button"
               className="flex items-center gap-1 text-sm font-medium text-[#666666]"
             >
               <Share2 className="h-5 w-5" />
@@ -54,7 +61,7 @@ const LiveTvPage = () => {
               <Image src="/images/logo.svg" alt="Bollywoodmasala" width={26} height={26} className="object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl text-[#191919]">
+              <span className="text-xl font-medium text-[#191919]">
                 Bollywoodmasala
               </span>
             </div>
@@ -68,7 +75,7 @@ const LiveTvPage = () => {
               }}
               className="inline-flex items-center gap-2 rounded-[8px] px-4 py-2 text-sm font-semibold text-white"
             >
-              <Plus className="h-4 w-4" />
+              <MessageSquarePlus className="h-4 w-4" />
               Add to Watchlist
             </button>
          

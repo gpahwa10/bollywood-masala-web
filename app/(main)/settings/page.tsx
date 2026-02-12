@@ -6,13 +6,13 @@ const page = () => {
         <div>
 
             <div className='flex flex-col gap-1'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl font-bold'>Darshan italiya</h1>
-                <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-medium'>Signed in as demo****@gmail.com</h4>
+                <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold'>Darshan italiya</h1>
+                <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-regular'>Signed in as demo****@gmail.com</h4>
             </div>
             <Separator />
             <div className='flex flex-col gap-1'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl font-bold'>Your account</h1>
-                <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-medium'>You sign in to Bollywoodmasala with your Google Account</h4>
+                <h1 className='text-xl sm:text-2xl md:text-3xl font-medium'>Your account</h1>
+                <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-regular'>You sign in to Bollywoodmasala with your Google Account</h4>
             </div>
             <Separator />
             <div className='flex flex-col gap-1'>
@@ -117,17 +117,17 @@ const page = () => {
                 <h2 className='text-lg font-medium'>Memberships</h2>
                 <div className='flex flex-col gap-1'>
                     <span className='text-sm sm:text-base text-black font-medium'>No Membership | <Link href="/subscription"><span className='text-primary font-medium underline text-sm sm:text-base cursor-pointer'>Get BollywoodMasala Premium</span></Link></span>
-                    <span className='text-sm sm:text-base text-[#666666] font-medium'>Premium offers uninterrupted music, ad-free videos, and more</span>
+                    <span className='text-sm sm:text-base text-[#666666] font-regular'>Premium offers uninterrupted music, ad-free videos, and more</span>
                 </div>
             </div>
             <Separator />
             <div className="flex flex-col gap-2 sm:gap-3 mb-4 min-w-0">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-medium shrink-0">About Us</h2>
-                <p className="text-sm sm:text-base text-[#666666] font-medium min-w-0 break-words">
+                <p className="text-sm sm:text-base text-[#666666] font-regular min-w-0 break-words">
                     Bollywoodmasala is your trusted destination for Bollywood news, live channels, exclusive reports, and verified entertainment updates. We connect fans with real‑time stories straight from the industry.
                 </p>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full mb-4">
                 <h2 className="text-base sm:text-lg font-medium shrink-0 flex-1">Legal</h2>
                 <div className="flex flex-col gap-2 min-w-0 flex-1">
                     <Link href="/terms-conditions" className="text-primary font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
@@ -139,15 +139,15 @@ const page = () => {
                 </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full">
-                <h2 className="text-base sm:text-lg font-medium shrink-0 flex-1">Contact</h2>
+                <h2 className="text-base sm:text-lg font-regular shrink-0 flex-1">Contact</h2>
                 <div className="flex flex-col gap-2 min-w-0 flex-1">
                     <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0 break-words">
-                        <span className="font-medium text-black shrink-0">Email:</span>
+                        <span className="font-regular text-black shrink-0">Email:</span>
                         <span className="text-[#666666] font-medium cursor-pointer">support@bollywoodmasala.com</span>
                     </span>
                     <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0">
-                        <span className="font-medium text-black shrink-0">Phone:</span>
-                        <span className="text-[#666666] font-medium">+91 980 000 0000</span>
+                        <span className="font-regular text-black shrink-0">Phone:</span>
+                        <span className="text-[#666666] font-regular">+91 980 000 0000</span>
                     </span>
                 </div>
             </div>

@@ -32,7 +32,7 @@ export default function OtpClient() {
                 <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
                     <Image src="/images/logo.svg" alt="logo" width={60} height={100} className="object-cover" />
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black">Verify Your Code</h1>
-                    <p className="text-center text-[#666666] text-sm sm:text-base font-medium px-2 sm:px-4">
+                    <p className="text-center text-[#666666] text-sm sm:text-base font-regular px-2 sm:px-4">
                         Enter your registered email address we'll send you an OTP to reset password
                     </p>
                 </div>

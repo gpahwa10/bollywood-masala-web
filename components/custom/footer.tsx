@@ -28,7 +28,7 @@ const Footer = () => {
 
                 <div className="hidden sm:block w-px self-stretch border-l border-[#19191926] min-h-[1px] ml-12 sm:ml-16 md:ml-20 lg:ml-24 xl:ml-28 2xl:ml-32 mr-16" aria-hidden />
 
-                <div className="flex flex-col gap-3 sm:gap-4 min-w-0 mr-16">
+                <div className="flex flex-col gap-3 sm:gap-4 min-w-0 mr-48">
                     <p className="text-lg sm:text-xl font-medium text-black">Quick Links</p>
                     <div className="flex flex-col gap-1.5 sm:gap-2">
                         <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">Terms of use</Link>

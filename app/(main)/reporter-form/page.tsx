@@ -5,7 +5,7 @@ const page = () => {
     return (
         <div className='flex flex-col gap-2 sm:gap-3 min-w-0'>
             <h1 className='text-xl sm:text-2xl font-bold'>Reporter Details</h1>
-            <h4 className='text-sm sm:text-base text-[#666666] font-medium'>We're here to help you with any problems you may be having with our product.</h4>
+            <h4 className='text-sm sm:text-base text-[#666666] font-regular'>We're here to help you with any problems you may be having with our product.</h4>
             <div className='bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-5'>
                 <form className='flex flex-col gap-1'>
                     <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>

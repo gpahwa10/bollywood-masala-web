@@ -67,7 +67,7 @@ const AppSidebar = () => {
             </SidebarHeader>
             
             <SidebarContent className="flex flex-col items-center w-full px-2 sm:px-3">
-                <p className="mt-3 sm:mt-5 w-full text-start px-3 sm:px-4 text-xs sm:text-sm font-semibold group-data-[collapsible=icon]:hidden">Menu</p>
+                <p className="mt-3 sm:mt-5 w-full text-start px-3 sm:px-4 text-xs sm:text-sm font-regular text-[#666666] group-data-[collapsible=icon]:hidden">Menu</p>
                 <SidebarMenu className="mx-auto w-full max-w-[220px] gap-1.5 sm:gap-2">
                     <SidebarMenuItem>
                         <SidebarMenuButton
