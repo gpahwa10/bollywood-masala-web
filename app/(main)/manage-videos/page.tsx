@@ -10,7 +10,7 @@ const page = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                 <div className="flex flex-col gap-1.5 sm:gap-2 min-w-0 flex-1">
                     <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">Uploaded Videos</h1>
-                    <p className="text-base sm:text-lg text-[#666666] font-medium min-w-0">
+                    <p className="text-base sm:text-lg text-[#666666] font-regular min-w-0">
                         Uploaded videos will be reviewed before going live on Bollywoodmasala.
                     </p>
                 </div>

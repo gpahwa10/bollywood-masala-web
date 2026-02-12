@@ -116,7 +116,7 @@ const page = () => {
             <div className='flex flex-col lg:flex-row gap-3 md:items-center md:justify-between'>
                 <h2 className='text-lg font-medium'>Memberships</h2>
                 <div className='flex flex-col gap-1'>
-                    <span className='text-sm sm:text-base text-black font-medium'>No Membership | <Link href="/subscription"><span className='text-primary font-medium underline text-sm sm:text-base cursor-pointer'>Get BollywoodMasala Premium</span></Link></span>
+                    <span className='text-sm sm:text-base text-black font-medium'>No Membership | <Link href="/subscription"><span className='text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer'>Get BollywoodMasala Premium</span></Link></span>
                     <span className='text-sm sm:text-base text-[#666666] font-regular'>Premium offers uninterrupted music, ad-free videos, and more</span>
                 </div>
             </div>
@@ -130,10 +130,10 @@ const page = () => {
             <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full mb-4">
                 <h2 className="text-base sm:text-lg font-medium shrink-0 flex-1">Legal</h2>
                 <div className="flex flex-col gap-2 min-w-0 flex-1">
-                    <Link href="/terms-conditions" className="text-primary font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
+                    <Link href="/terms-conditions" className="text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
                         Terms & Conditions
                     </Link>
-                    <Link href="/privacy-policy" className="text-primary font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
+                    <Link href="/privacy-policy" className="text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
                         Privacy Policy
                     </Link>
                 </div>
