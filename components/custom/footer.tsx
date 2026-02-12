@@ -29,21 +29,21 @@ const Footer = () => {
                 <div className="hidden sm:block w-px self-stretch border-l border-[#19191926] min-h-[1px] ml-12 sm:ml-16 md:ml-20 lg:ml-24 xl:ml-28 2xl:ml-32 mr-16" aria-hidden />
 
                 <div className="flex flex-col gap-3 sm:gap-4 min-w-0 mr-16">
-                    <p className="text-lg sm:text-xl font-bold text-black">Quick Links</p>
+                    <p className="text-lg sm:text-xl font-medium text-black">Quick Links</p>
                     <div className="flex flex-col gap-1.5 sm:gap-2">
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">Terms of use</Link>
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">Privacy policy</Link>
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">FAQ</Link>
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">Contact Us</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">Terms of use</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">Privacy policy</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">FAQ</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">Contact Us</Link>
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
-                    <p className="text-lg sm:text-xl font-bold text-black">Useful Links</p>
+                    <p className="text-lg sm:text-xl font-medium text-black">Useful Links</p>
                     <div className="flex flex-col gap-1.5 sm:gap-2">
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">Settings</Link>
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">Cookie Policy</Link>
-                        <Link href="/" className="text-sm sm:text-base font-medium text-gray-600 hover:text-black">About</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">Settings</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">Cookie Policy</Link>
+                        <Link href="/" className="text-sm sm:text-base font-regular text-gray-600 hover:text-black">About</Link>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,10 @@
 "use client"
-import { useState } from "react"
+
+import { useState, useEffect, useRef } from "react"
 import { Input } from '../ui/input'
 import { Filter, Search } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useParams, usePathname, useRouter } from 'next/navigation'
 import { getCategoryById } from '@/lib/categories'
 import { SidebarTrigger } from '@/components/ui/sidebar'
@@ -23,9 +25,24 @@ const Header = () => {
     const params = useParams();
     const router = useRouter();
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
+
     const category = pathname.startsWith("/category/") && params.id ? getCategoryById(params.id) : null;
     const staticTitle = routeTitleMap[pathname];
     const title = category?.title ?? staticTitle ?? "Home";
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsUserMenuOpen(false);
+            }
+        }
+        if (isUserMenuOpen) {
+            document.addEventListener("click", handleClickOutside);
+        }
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, [isUserMenuOpen]);
+
     return (
         <div className="flex flex-col lg:flex-row items-stretch lg:items-end justify-between gap-3 my-4 min-w-0">
   
@@ -60,17 +77,52 @@ const Header = () => {
       className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7"
     />
 
-    {/* AVATAR */}
-    <div className="relative shrink-0">
+    {/* AVATAR + MENU */}
+    <div className="relative shrink-0" ref={menuRef}>
       <button
         type="button"
-        onClick={() => setIsUserMenuOpen((prev) => !prev)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsUserMenuOpen((prev) => !prev);
+        }}
         className="relative h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 rounded-full overflow-hidden border-2 border-red"
+        aria-expanded={isUserMenuOpen}
+        aria-haspopup="true"
       >
         <Image src="/images/dummy-user.jpg" alt="User" fill className="object-cover" />
       </button>
 
-      {/* DROPDOWN unchanged */}
+      {isUserMenuOpen && (
+        <div
+          className="absolute right-0 top-full mt-2 w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg z-50"
+          role="menu"
+        >
+          <Link
+            href="/settings"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            Settings
+          </Link>
+          <Link
+            href="/subscription"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            Subscription
+          </Link>
+          <button
+            type="button"
+            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            onClick={() => setIsUserMenuOpen(false)}
+          >
+            Sign out
+          </button>
+        </div>
+      )}
     </div>
 
   </div>
