@@ -11,7 +11,7 @@ const routeTitleMap: Record<string, string> = {
     "/": "Home",
     "/live-tv": "Live Channel",
     "/categories": "Categories",
-    "/reporter-form": "Reporter Form",
+    "/reporter-form": "Become Reporter",
     "/settings": "Settings",
     "/subscription": "Subscription",
     "/manage-videos": "Manage Uploads",

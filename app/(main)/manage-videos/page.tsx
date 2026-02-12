@@ -1,5 +1,5 @@
 "use client"
-import LatestVideos from '@/components/common-components/latest-videos'
+import UploadedVideos from '@/components/common-components/uploaded-videos'
 import { PlusIcon } from 'lucide-react'
 import React from 'react'
 import { useRouter } from 'next/navigation'
@@ -27,7 +27,7 @@ const page = () => {
                     </button>
                 </div>
             </div>
-            <LatestVideos />
+            <UploadedVideos />
         </div>
     )
 }

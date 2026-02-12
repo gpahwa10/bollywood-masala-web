@@ -8,8 +8,7 @@ const page = () => {
             <h4 className='text-sm sm:text-base text-[#666666] font-medium'>We're here to help you with any problems you may be having with our product.</h4>
             <div className='bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-5'>
                 <form className='flex flex-col gap-1'>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0
- gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Full Name</h1>
                             <input
@@ -27,8 +26,7 @@ const page = () => {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0
- gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Email</h1>
                             <input
@@ -46,8 +44,7 @@ const page = () => {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0
- gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Address 2</h1>
                             <input
@@ -65,8 +62,7 @@ const page = () => {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0
- gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>State</h1>
                             <input
@@ -109,7 +105,7 @@ const page = () => {
                                     }}
                                     className="rounded-[8px] border border-[#19191926] px-3 py-2 text-base font-semibold text-white transition-colors hover:bg-gray-50"
                                 >
-                                    Save Details
+                                    Choose File
                                 </button>
                             </div>
                         </div>
@@ -134,7 +130,7 @@ const page = () => {
                                 />
                             </div>
                         </div>
-                        <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 p-4 mb-4'>
+                        <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
                             <div className='flex flex-col gap-1 flex-1'>
                                 <h1 className='text-lg font-medium'>Account Number</h1>
                                 <input
@@ -152,6 +148,25 @@ const page = () => {
                                 />
                             </div>
                         </div>
+                        <div className='flex flex-col gap-2 my-8'>
+                        <h3 className='text-base sm:text-lg font-medium'>Upload image of cancelled cheque </h3>
+                        <div className="border-dashed border-2 border-[#19191926] rounded-[8px] px-3 sm:px-5 py-6 sm:py-10">
+                            <div className='flex flex-col gap-2 items-center justify-center'>
+                                <Image src="/icons/upload.svg" alt="upload" width={24} height={24} />
+                                <h1 className='text-base font-medium'>Drag and Drop image here</h1>
+                                <p className='text-lg text-[#666666] font-regular'> pdf, jpeg up to 5mb</p>
+                                <button
+                                    type="button"
+                                    style={{
+                                        background: 'linear-gradient(96.15deg, #531416 9.79%, #DB3130 53.74%, #531416 97.69%)',
+                                    }}
+                                    className="rounded-[8px] border border-[#19191926] px-3 py-2 text-base font-semibold text-white transition-colors hover:bg-gray-50"
+                                >
+                                    Upload
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4 md:gap-6 mb-4 min-w-0 items-stretch md:items-center justify-between">
                         <div className="flex flex-row items-start md:items-center gap-2 min-w-0 flex-1">

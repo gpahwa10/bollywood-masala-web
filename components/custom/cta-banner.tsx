@@ -22,7 +22,7 @@ const CtaBanner = () => {
           />
         </span>
 
-        <p className="text-sm sm:text-base text-gray-300 max-w-full">
+        <p className="text-sm sm:text-base text-[#999999] max-w-full">
           Download the Bollywoodmasala app for real-time gossip & breaking news.
         </p>
       </div>

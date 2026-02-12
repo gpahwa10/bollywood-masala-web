@@ -1,8 +1,7 @@
 import AppSidebar from "@/components/custom/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import Footer from "@/components/custom/footer";
-import CtaBanner from "@/components/custom/cta-banner";
-import DistributionNetwork from "@/components/custom/distribution-network";
+import ConditionalCtaAndDistribution from "@/components/custom/conditional-cta-and-distribution";
 import Header from "@/components/custom/header";
 export default function MainLayout({
   children,
@@ -16,8 +15,7 @@ export default function MainLayout({
         <main className="relative flex-1 px-4 sm:px-5 md:px-6 pb-4 sm:pb-6 gap-4 min-w-0 overflow-x-hidden">
           <Header />
           {children}
-          <CtaBanner />
-          <DistributionNetwork />
+          <ConditionalCtaAndDistribution />
           <Footer />
         </main>
       </SidebarProvider>

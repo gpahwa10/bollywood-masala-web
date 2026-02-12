@@ -48,7 +48,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
 
-  --font-sans: "Poppins", sans-serif;
+  --font-sans: var(--font-poppins), sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -97,7 +97,7 @@
 
 /* Base Styles */
 body {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 .dark {

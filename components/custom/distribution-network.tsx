@@ -94,6 +94,7 @@ const DistributionNetwork = () => {
                     ))
                 }
             </div>
+            <p className="text-sm sm:text-base font-regular text-[#666666]">Bollywoodmasala is also available on over 200 brands of smart TVs including Sony, LG, Samsung, Xiaomi, TCL, Vu, and many more. Catch us on your favorite OTT platforms and cable networks anytime, anywhere.</p>
         </div>
     )
 }

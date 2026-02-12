@@ -127,9 +127,9 @@ const page = () => {
                     Bollywoodmasala is your trusted destination for Bollywood news, live channels, exclusive reports, and verified entertainment updates. We connect fans with real‑time stories straight from the industry.
                 </p>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 min-w-0">
-                <h2 className="text-base sm:text-lg font-medium shrink-0">Legal</h2>
-                <div className="flex flex-col gap-2 min-w-0">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full">
+                <h2 className="text-base sm:text-lg font-medium shrink-0 flex-1">Legal</h2>
+                <div className="flex flex-col gap-2 min-w-0 flex-1">
                     <Link href="/terms-conditions" className="text-primary font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
                         Terms & Conditions
                     </Link>
@@ -138,19 +138,20 @@ const page = () => {
                     </Link>
                 </div>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 min-w-0">
-                <h2 className="text-base sm:text-lg font-medium shrink-0">Contact</h2>
-                <div className="flex flex-col gap-2 min-w-0">
-                    <span className="flex flex-col gap-0.5 text-sm sm:text-base min-w-0 break-words">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full">
+                <h2 className="text-base sm:text-lg font-medium shrink-0 flex-1">Contact</h2>
+                <div className="flex flex-col gap-2 min-w-0 flex-1">
+                    <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0 break-words">
                         <span className="font-medium text-black shrink-0">Email:</span>
                         <span className="text-[#666666] font-medium cursor-pointer">support@bollywoodmasala.com</span>
                     </span>
-                    <span className="flex flex-col gap-0.5 text-sm sm:text-base min-w-0">
+                    <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0">
                         <span className="font-medium text-black shrink-0">Phone:</span>
                         <span className="text-[#666666] font-medium">+91 980 000 0000</span>
                     </span>
                 </div>
             </div>
+            <Separator />
         </div>
     )
 }
