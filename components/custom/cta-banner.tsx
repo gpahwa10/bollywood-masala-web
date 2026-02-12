@@ -3,7 +3,7 @@ import Image from "next/image";
 const CtaBanner = () => {
   return (
     <div
-      className="w-full rounded-lg flex flex-col lg:flex-row items-center justify-between gap-6 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-16"
+      className="w-full rounded-lg flex flex-col lg:flex-row items-center justify-between gap-6 px-[60px] py-[42px]"
       style={{
         background:
           "linear-gradient(89.95deg, #191919 17.15%, rgba(127, 13, 13, 0.91) 41.25%, #191919 85.13%)",
