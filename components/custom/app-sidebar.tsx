@@ -36,7 +36,7 @@ const AppSidebar = () => {
     return (
         <Sidebar
             collapsible="icon"
-            className="relative flex flex-col items-center [&_[data-sidebar=sidebar]]:!bg-white [&_[data-sidebar=sidebar]]:relative max-h-[100dvh] md:max-h-[1220px] border border-solid"
+            className="relative flex flex-col items-center [&_[data-sidebar=sidebar]]:!bg-white [&_[data-sidebar=sidebar]]:relative max-h-[100dvh] md:max-h-[14000px] border border-solid"
             style={{
                 borderImage: "linear-gradient(180.66deg, rgba(0, 0, 0, 0) -3.55%, #FFFFFF 13.91%, #AEAEAE 26.74%, rgba(0, 0, 0, 0) 145.4%) 1",
             }}
