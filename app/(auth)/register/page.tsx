@@ -41,8 +41,8 @@ const page = () => {
                                 defaultValue=""
                             >
                                 <option value="" disabled className="text-gray-400">Location</option>
-                                {countryList.map((country) => (
-                                    <option key={country.code} value={country.name}>{country.name}</option>
+                                {countryList.map((country, index) => (
+                                    <option key={`${country.code}-${index}`} value={country.name}>{country.name}</option>
                                 ))}
                             </select>
                             <ChevronDown className='absolute right-0 top-1/2 -translate-y-1/2 text-[#191919] w-4 h-4 pointer-events-none' />

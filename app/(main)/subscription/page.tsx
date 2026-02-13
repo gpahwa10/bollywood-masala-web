@@ -72,9 +72,7 @@ const page = () => {
                     <h1 className='text-lg sm:text-xl font-semibold'>{plan.name}</h1>
                     <p className='text-base sm:text-lg text-[#666666] font-regular'>{plan.description}</p>
                     <h3 className='text-2xl sm:text-3xl font-bold text-[#DF3234]'>₹{plan.price}</h3>
-                    <div className='flex flex-col lg:flex-row w-full gap-2'>
-                        <button className='text-black px-4 py-2 → px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg h-10 border border-1 border-[#DF3234] w-full'>Start Free Trial</button>
-                        <div
+                    <div
                             className="w-full rounded-md p-[1px]"
                             style={{
                                 background: 'linear-gradient(270deg, #BD002A 0%, rgba(255, 255, 255, 0) 50%, #BD002A 100%)',
@@ -90,7 +88,6 @@ const page = () => {
                                 Choose Plan
                             </button>
                         </div>
-                    </div>
                 </div>
                 ))}
             </div>

@@ -56,19 +56,21 @@ const AppSidebar = () => {
 
             <SidebarHeader className="items-center group-data-[collapsible=icon]:hidden">
                 <div className="flex items-center justify-center gap-2 py-3 sm:py-4">
-                    <Image
-                        src="/images/logo.svg"
-                        alt="Bollywood Masala logo"
-                        width={100}
-                        height={100}
-                        className="h-14 w-14 sm:h-20 sm:w-20 md:h-[100px] md:w-[100px] object-contain"
-                    />
+                    <Link href="/" onClick={closeMobileSidebar}>
+                        <Image
+                            src="/images/logo.svg"
+                            alt="Bollywood Masala logo"
+                            width={100}
+                            height={100}
+                            className="h-14 w-14 sm:h-20 sm:w-20 md:h-[100px] md:w-[100px] object-contain"
+                        />
+                    </Link>
                 </div>
             </SidebarHeader>
             
             <SidebarContent className="flex flex-col items-center w-full px-2 sm:px-3">
                 <p className="mt-3 sm:mt-5 w-full text-start px-3 sm:px-4 text-xs sm:text-sm font-regular text-[#666666] group-data-[collapsible=icon]:hidden">Menu</p>
-                <SidebarMenu className="mx-auto w-full max-w-[220px] gap-1.5 sm:gap-2">
+                <SidebarMenu className="mx-auto w-full max-w-[220px]">
                     <SidebarMenuItem>
                         <SidebarMenuButton
                             asChild
@@ -101,7 +103,7 @@ const AppSidebar = () => {
                         >
                             <Link href="/categories" onClick={closeMobileSidebar}>
                                 <Image src="/icons/category.svg" alt="Category" width={20} height={20} className="shrink-0 size-5" />
-                                <span>Category</span>
+                                <span>Categories</span>
                             </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -142,7 +144,7 @@ const AppSidebar = () => {
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <div
-                        className="w-full max-w-[194px] rounded-xl p-[1px] group-data-[collapsible=icon]:hidden"
+                        className="w-full max-w-[194px] rounded-xl p-[1px] mt-4 group-data-[collapsible=icon]:hidden"
                         style={{
                             background: 'linear-gradient(180deg, #4C4C4C -25.71%, rgba(178, 178, 178, 0.02) 100%)',
                         }}

@@ -17,7 +17,7 @@ export const categories = [
     {
         id: 4,
         image: "/images/categories/category-4.png",
-        title: "BollywoodMasala Exclusive"
+        title: "BM Exclusive"
     },
     {
         id: 5,
@@ -27,7 +27,7 @@ export const categories = [
     {
         id: 6,
         image: "/images/categories/category-6.png",
-        title: "BollywoodMasala Top 10"
+        title: "BM Top 10"
     },
     {
         id: 7,

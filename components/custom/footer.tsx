@@ -4,23 +4,23 @@ import Link from "next/link"
 const Footer = () => {
     return (
         <footer className="w-full bg-white rounded-lg overflow-hidden">
-            <div className="flex max-w-7xl flex-col sm:flex-row flex-wrap items-start justify-start gap-6 sm:gap-8 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
-                <div className="flex flex-col gap-6 sm:gap-10 w-full sm:w-auto">
+            <div className="flex max-w-5xl flex-row sm:flex-row flex-wrap items-start justify-start gap-6 sm:gap-8 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
+                <div className="flex flex-row items-center gap-6 sm:gap-10 w-full sm:w-auto">
                     <Image src="/images/logo.svg" alt="Bollywood Masala logo" width={80} height={80} className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-[100px] md:h-[100px]" />
                     <div>
                         <p className="text-base sm:text-lg font-bold text-black">Follow us</p>
-                        <div className="flex flex-row gap-2 mt-2">
+                        <div className="grid grid-cols-2 gap-2 mt-2">
                             <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md bg-[#EFEFEF]">
-                                <Image src="/icons/facebook.svg" alt="Facebook" width={18} height={18} className="object-contain sm:w-5 sm:h-5" />
+                                <Image src="/icons/facebook.svg" alt="Facebook" width={18} height={18} className="object-contain sm:w-5 sm:h-5 cursor-pointer" />
                             </div>
                             <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md bg-[#EFEFEF]">
-                                <Image src="/icons/instagram.svg" alt="Instagram" width={18} height={18} className="object-contain sm:w-5 sm:h-5" />
+                                <Image src="/icons/instagram.svg" alt="Instagram" width={18} height={18} className="object-contain sm:w-5 sm:h-5 cursor-pointer" />
                             </div>
                             <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md bg-[#EFEFEF]">
-                                <Image src="/icons/x.svg" alt="X" width={18} height={18} className="object-contain sm:w-5 sm:h-5" />
+                                <Image src="/icons/x.svg" alt="X" width={18} height={18} className="object-contain sm:w-5 sm:h-5 cursor-pointer" />
                             </div>
                             <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md bg-[#EFEFEF]">
-                                <Image src="/icons/youtube.svg" alt="YouTube" width={18} height={18} className="object-contain sm:w-5 sm:h-5" />
+                                <Image src="/icons/youtube.svg" alt="YouTube" width={18} height={18} className="object-contain sm:w-5 sm:h-5 cursor-pointer" />
                             </div>
                         </div>
                     </div>

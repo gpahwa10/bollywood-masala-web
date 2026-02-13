@@ -1,10 +1,11 @@
 import React from 'react'
 import Separator from '@/components/common-components/separator'
 import Link from 'next/link'
+import countries from "country-list-with-dial-code-and-flag";
 const page = () => {
+    const countryList = countries.getAll();
     return (
         <div>
-
             <div className='flex flex-col gap-1'>
                 <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold'>Darshan italiya</h1>
                 <h4 className='text-sm sm:text-base md:text-lg text-[#666666] font-regular'>Signed in as demo****@gmail.com</h4>
@@ -36,13 +37,26 @@ const page = () => {
                         />
                     </div>
                     <div className='flex flex-col gap-1 flex-1'>
-                        <h1 className='text-lg font-medium'>Phone Number</h1>
-                        <input
-                            type="tel"
-                            placeholder="1234567890"
-                            className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
-                        />
-                    </div>
+                            <h1 className='text-lg font-medium'>Phone Number</h1>
+                            <div className="flex flex-row gap-2">
+                                <select
+                                    name="countryCode"
+                                    className="bg-white text-2xl sm:text-3xl rounded-[8px] border border-[#19191926] outline-none focus:border-primary font-sans font-semibold text-[#191919] transition-colors min-w-0 w-14 sm:w-16 shrink-0 cursor-pointer"
+                                >
+                                    {countryList.map((country, index) => (
+                                        <option key={`${country.code}-${index}`} value={country.dial_code}>
+                                            {country.flag}
+                                        </option>
+                                    ))}
+                                </select>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="1234567890"
+                                    className="flex-1 min-w-0 bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                                />
+                            </div>
+                        </div>
 
                 </div>
             </div>
@@ -121,35 +135,32 @@ const page = () => {
                 </div>
             </div>
             <Separator />
-            <div className="flex flex-col gap-2 sm:gap-3 mb-4 min-w-0">
+            <div>
+                <div className="flex flex-col gap-2 sm:gap-3 mb-4 min-w-0">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-medium shrink-0">About Us</h2>
                 <p className="text-sm sm:text-base text-[#666666] font-regular min-w-0 break-words">
                     Bollywoodmasala is your trusted destination for Bollywood news, live channels, exclusive reports, and verified entertainment updates. We connect fans with real‑time stories straight from the industry.
                 </p>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full mb-4">
-                <h2 className="text-base sm:text-lg font-medium shrink-0 flex-1">Legal</h2>
-                <div className="flex flex-col gap-2 min-w-0 flex-1">
-                    <Link href="/terms-conditions" className="text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
-                        Terms & Conditions
-                    </Link>
-                    <Link href="/privacy-policy" className="text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
-                        Privacy Policy
-                    </Link>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 sm:gap-x-12 gap-y-6 min-w-0">
+                <div className="flex flex-col gap-3 min-w-0">
+                    <h2 className="text-base sm:text-lg font-medium shrink-0">Legal</h2>
+                    <div className="flex flex-col gap-2 min-w-0">
+                        <Link href="/terms-conditions" className="text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
+                            Terms & Conditions
+                        </Link>
+                        <Link href="/privacy-policy" className="text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit">
+                            Privacy Policy
+                        </Link>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-3 min-w-0">
+                    <h2 className="text-base sm:text-lg font-medium shrink-0">Contact</h2>
+                    <Link href="/terms-conditions" className="text-black font-medium text-sm sm:text-base cursor-pointer break-words w-fit">
+                            Have a question? <span className='text-[#DF3234] font-medium underline text-sm sm:text-base cursor-pointer break-words w-fit'>Contact Support</span>
+                        </Link>
                 </div>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-start gap-3 max-w-full">
-                <h2 className="text-base sm:text-lg font-regular shrink-0 flex-1">Contact</h2>
-                <div className="flex flex-col gap-2 min-w-0 flex-1">
-                    <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0 break-words">
-                        <span className="font-regular text-black shrink-0">Email:</span>
-                        <span className="text-[#666666] font-regular cursor-pointer">support@bollywoodmasala.com</span>
-                    </span>
-                    <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0">
-                        <span className="font-regular text-black shrink-0">Phone:</span>
-                        <span className="text-[#666666] font-regular">+91 980 000 0000</span>
-                    </span>
-                </div>
             </div>
             <Separator />
         </div>

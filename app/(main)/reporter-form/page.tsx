@@ -9,8 +9,8 @@ const page = () => {
             <h1 className='text-xl sm:text-2xl font-bold'>Reporter Details</h1>
             <h4 className='text-sm sm:text-base text-[#666666] font-regular'>We're here to help you with any problems you may be having with our product.</h4>
             <div className='bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-5'>
-                <form className='flex flex-col gap-1'>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
+                <form className='flex flex-col'>
+                    <div className='flex flex-col md:flex-row gap-2 sm:gap-3 min-w-0 gap-2 mb-2'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Full Name</h1>
                             <input
@@ -26,8 +26,8 @@ const page = () => {
                                     name="countryCode"
                                     className="bg-white text-2xl sm:text-3xl rounded-[8px] border border-[#19191926] outline-none focus:border-primary font-sans font-semibold text-[#191919] transition-colors min-w-0 w-14 sm:w-16 shrink-0 cursor-pointer"
                                 >
-                                    {countryList.map((country) => (
-                                        <option key={country.code} value={country.dial_code}>
+                                    {countryList.map((country, index) => (
+                                        <option key={`${country.code}-${index}`} value={country.dial_code}>
                                             {country.flag}
                                         </option>
                                     ))}
@@ -41,7 +41,7 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-2 sm:gap-3 min-w-0 gap-2 mb-2'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Email</h1>
                             <input
@@ -59,7 +59,7 @@ const page = () => {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-2 sm:gap-3 min-w-0 gap-2 mb-2'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Address 2</h1>
                             <input
@@ -77,7 +77,7 @@ const page = () => {
                             />
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
+                    <div className='flex flex-col md:flex-row gap-2 sm:gap-3 min-w-0 gap-2 mb-2'>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>State</h1>
                             <input
@@ -127,7 +127,7 @@ const page = () => {
                     </div>
                     <div className='flex flex-col gap-2 my-8'>
                         <h3 className='text-2xl font-medium'>Bank details for payments</h3>
-                        <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
+                        <div className='flex flex-col md:flex-row gap-2 sm:gap-3 min-w-0 gap-2 mb-2'>
                             <div className='flex flex-col gap-1 flex-1'>
                                 <h1 className='text-lg font-medium'>Bank Name</h1>
                                 <input
@@ -145,7 +145,7 @@ const page = () => {
                                 />
                             </div>
                         </div>
-                        <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
+                        <div className='flex flex-col md:flex-row gap-2 sm:gap-3 min-w-0 gap-2 mb-2'>
                             <div className='flex flex-col gap-1 flex-1'>
                                 <h1 className='text-lg font-medium'>Account Number</h1>
                                 <input

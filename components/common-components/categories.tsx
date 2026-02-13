@@ -7,9 +7,9 @@ const Categories = () => {
     const router = useRouter();
 
     return (
-        <div className="flex flex-col gap-3 sm:gap-4 mb-4 min-w-0 overflow-hidden">
+        <div className="flex flex-col gap-1 sm:gap-4 mb-4 min-w-0 overflow-hidden">
             <h1 className="text-xl sm:text-2xl font-bold">Categories</h1>
-            <div className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3">
                 {
                     categories.map((category) => (
                         <div

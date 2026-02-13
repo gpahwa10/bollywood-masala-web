@@ -49,16 +49,16 @@ const Header = () => {
       {/* LEFT: hamburger (mobile) + title */}
       <div className="flex flex-row items-center gap-2 min-w-0 flex-1">
         <SidebarTrigger className="lg:hidden shrink-0 size-9 flex items-center justify-center" />
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate min-w-0">
+        {/* <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate min-w-0">
           {title}
-        </h1>
+        </h1> */}
       </div>
 
       {/* RIGHT */}
       <div className="flex flex-row items-center gap-2 sm:gap-3 lg:gap-4 min-w-0 shrink-0 flex-wrap sm:flex-nowrap">
 
         {/* SEARCH */}
-        <div className="flex items-center bg-white gap-2 sm:gap-3 rounded-xl px-3 sm:px-5 py-2.5 sm:py-3 min-w-0 w-full sm:w-auto sm:min-w-[200px] lg:min-w-[320px] lg:max-w-2xl flex-1 sm:flex-initial">
+        <div className="flex items-center bg-white gap-2 sm:gap-3 rounded-xl px-3 sm:px-5 py-2.5 sm:py-3 min-w-0 w-full sm:w-auto  flex-1 sm:flex-initial">
           {/* Search Icon */}
           <Image src="/icons/search-icon.svg" alt="Search" width={24} height={24} className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7" />
 

@@ -5,7 +5,7 @@ import Image from "next/image"
     }
     const NetworkCard = ({ image, name }: NetworkCardProps) => {
     return (
-        <div className="flex flex-col w-full min-h-[80px] sm:min-h-[95px] md:h-[105px] gap-1 sm:gap-2 bg-[#F6F6F6] rounded-lg items-center justify-center p-2 sm:p-0">
+        <div className="flex flex-col w-full min-h-[90px] sm:min-h-[105px] md:h-[115px] gap-1 sm:gap-2 bg-[#F6F6F6] rounded-lg items-center justify-center p-2 sm:p-0">
             <Image
                 src={image}
                 alt={name}

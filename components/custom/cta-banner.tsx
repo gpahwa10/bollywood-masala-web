@@ -3,7 +3,7 @@ import Image from "next/image";
 const CtaBanner = () => {
   return (
     <div
-      className="w-full rounded-lg flex flex-col lg:flex-row items-center justify-between gap-6 px-[60px] py-[42px]"
+      className="w-full rounded-lg flex flex-col lg:flex-row items-center justify-between gap-6 px-[60px] py-[21px]"
       style={{
         background:
           "linear-gradient(89.95deg, #191919 17.15%, rgba(127, 13, 13, 0.91) 41.25%, #191919 85.13%)",
@@ -28,20 +28,20 @@ const CtaBanner = () => {
       </div>
 
       {/* BUTTONS */}
-      <div className="flex flex-row items-center justify-center gap-2 shrink-0 order-2">
+      <div className="flex flex-col items-center justify-center gap-2 shrink-0 order-2">
         <Image
           src="/images/app-store.svg"
           alt="app-store"
           width={120}
           height={86}
-          className="w-[100px] h-auto sm:w-[120px] md:w-[140px]"
+          className="w-[100px] h-auto sm:w-[120px] md:w-[140px] cursor-pointer"
         />
         <Image
           src="/images/play-store.svg"
           alt="google-play"
           width={120}
           height={86}
-          className="w-[100px] h-auto sm:w-[120px] md:w-[140px]"
+          className="w-[100px] h-auto sm:w-[120px] md:w-[140px] cursor-pointer"
         />
       </div>
     </div>
