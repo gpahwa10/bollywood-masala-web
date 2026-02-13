@@ -44,7 +44,7 @@ export function HeroCarousel() {
         }}
         modules={[EffectCoverflow, Pagination]}
         className="!overflow-visible"
-        style={{ paddingBottom: '2.5rem' }}
+        style={{ paddingBottom: '0.5rem' }}
       >
         {images.map((image, index) => (
           <SwiperSlide
