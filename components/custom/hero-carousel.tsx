@@ -25,7 +25,7 @@ export function HeroCarousel() {
   ];
   const router = useRouter();
   return (
-    <div className="relative overflow-visible py-8 px-4 sm:px-5 md:px-6 max-w-[1200px] mx-auto min-h-[260px] sm:min-h-[320px] md:min-h-[340px]">
+    <div className="relative overflow-visible py-6 sm:py-8 px-4 sm:px-6 md:px-8 lg:px-10 max-w-[1200px] mx-auto min-h-[200px] sm:min-h-[260px] md:min-h-[320px] lg:min-h-[340px]">
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -50,7 +50,7 @@ export function HeroCarousel() {
           <SwiperSlide
             key={index}
             onClick={() => router.push(`/category/${index + 1}`)}
-            className="!w-[407px] !h-[297px] rounded-[12px] shadow-[0_0_44px_0_#0000004D] cursor-pointer overflow-hidden"
+            className="!w-[260px] !h-[146px] sm:!w-[340px] sm:!h-[191px] md:!w-[380px] md:!h-[214px] lg:!w-[407px] lg:!h-[297px] rounded-[12px] shadow-[0_0_44px_0_#0000004D] cursor-pointer overflow-hidden"
           >
             <img
               src={image}
@@ -66,17 +66,17 @@ export function HeroCarousel() {
         type="button"
         aria-label="Previous slide"
         onClick={() => swiperRef.current?.slidePrev()}
-        className="absolute left-[calc(50%-203.5px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white border-0 shadow-md text-gray-800 hover:bg-gray-50 transition-colors"
+        className="absolute left-[calc(50%-130px)] sm:left-[calc(50%-170px)] md:left-[calc(50%-190px)] lg:left-[calc(50%-203.5px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white border-0 shadow-md text-gray-800 hover:bg-gray-50 transition-colors"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
       </button>
       <button
         type="button"
         aria-label="Next slide"
         onClick={() => swiperRef.current?.slideNext()}
-        className="absolute right-[calc(50%-203.5px)] top-1/2 translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white border-0 shadow-md text-gray-800 hover:bg-gray-50 transition-colors"
+        className="absolute right-[calc(50%-130px)] sm:right-[calc(50%-170px)] md:right-[calc(50%-190px)] lg:right-[calc(50%-203.5px)] top-1/2 translate-x-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white border-0 shadow-md text-gray-800 hover:bg-gray-50 transition-colors"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
       </button>
     </div>
   );

@@ -7,7 +7,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useParams, usePathname, useRouter } from 'next/navigation'
 import { getCategoryById } from '@/lib/categories'
-import { SidebarTrigger } from '@/components/ui/sidebar'
 
 const routeTitleMap: Record<string, string> = {
   "/": "Home",
@@ -48,7 +47,6 @@ const Header = () => {
 
       {/* LEFT */}
       <div className="flex flex-row items-center gap-2 min-w-0">
-        <SidebarTrigger className="lg:hidden shrink-0" />
         <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate">
           {title}
         </h1>
