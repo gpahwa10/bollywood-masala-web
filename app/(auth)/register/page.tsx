@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import countries from "country-list-with-dial-code-and-flag";
 import { ChevronDown, LockKeyhole, Mail, Phone, UserRound } from 'lucide-react'
 const page = () => {
+    const countryList = countries.getAll();
     return (
+
         <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-4 sm:px-6">
             <Image
                 src="/images/logo.svg"
@@ -38,13 +41,9 @@ const page = () => {
                                 defaultValue=""
                             >
                                 <option value="" disabled className="text-gray-400">Location</option>
-                                <option value="mumbai">Mumbai</option>
-                                <option value="delhi">Delhi</option>
-                                <option value="bangalore">Bangalore</option>
-                                <option value="hyderabad">Hyderabad</option>
-                                <option value="chennai">Chennai</option>
-                                <option value="kolkata">Kolkata</option>
-                                <option value="other">Other</option>
+                                {countryList.map((country) => (
+                                    <option key={country.code} value={country.name}>{country.name}</option>
+                                ))}
                             </select>
                             <ChevronDown className='absolute right-0 top-1/2 -translate-y-1/2 text-[#191919] w-4 h-4 pointer-events-none' />
                         </div>

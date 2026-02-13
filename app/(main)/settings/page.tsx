@@ -143,7 +143,7 @@ const page = () => {
                 <div className="flex flex-col gap-2 min-w-0 flex-1">
                     <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0 break-words">
                         <span className="font-regular text-black shrink-0">Email:</span>
-                        <span className="text-[#666666] font-medium cursor-pointer">support@bollywoodmasala.com</span>
+                        <span className="text-[#666666] font-regular cursor-pointer">support@bollywoodmasala.com</span>
                     </span>
                     <span className="flex flex-row gap-0.5 text-sm sm:text-base min-w-0">
                         <span className="font-regular text-black shrink-0">Phone:</span>

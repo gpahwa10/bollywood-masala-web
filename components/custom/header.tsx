@@ -10,128 +10,134 @@ import { getCategoryById } from '@/lib/categories'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 
 const routeTitleMap: Record<string, string> = {
-    "/": "Home",
-    "/live-tv": "Live Channel",
-    "/categories": "Categories",
-    "/reporter-form": "Become Reporter",
-    "/settings": "Settings",
-    "/subscription": "Subscription",
-    "/manage-videos": "Manage Uploads",
-    "/upload-video": "Manage Uploads",
+  "/": "Home",
+  "/live-tv": "Live Channel",
+  "/categories": "Categories",
+  "/reporter-form": "Become Reporter",
+  "/settings": "Settings",
+  "/subscription": "Subscription",
+  "/manage-videos": "Manage Uploads",
+  "/upload-video": "Manage Uploads",
 }
 
 const Header = () => {
-    const pathname = usePathname();
-    const params = useParams();
-    const router = useRouter();
-    const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const params = useParams();
+  const router = useRouter();
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
-    const category = pathname.startsWith("/category/") && params.id ? getCategoryById(params.id) : null;
-    const staticTitle = routeTitleMap[pathname];
-    const title = category?.title ?? staticTitle ?? "Home";
+  const category = pathname.startsWith("/category/") && params.id ? getCategoryById(params.id) : null;
+  const staticTitle = routeTitleMap[pathname];
+  const title = category?.title ?? staticTitle ?? "Home";
 
-    useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
-            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-                setIsUserMenuOpen(false);
-            }
-        }
-        if (isUserMenuOpen) {
-            document.addEventListener("click", handleClickOutside);
-        }
-        return () => document.removeEventListener("click", handleClickOutside);
-    }, [isUserMenuOpen]);
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsUserMenuOpen(false);
+      }
+    }
+    if (isUserMenuOpen) {
+      document.addEventListener("click", handleClickOutside);
+    }
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [isUserMenuOpen]);
 
-    return (
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-end justify-between gap-3 my-4 min-w-0">
-  
-  {/* LEFT */}
-  <div className="flex flex-row items-center gap-2 min-w-0">
-    <SidebarTrigger className="lg:hidden shrink-0" />
-    <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate">
-      {title}
-    </h1>
-  </div>
+  return (
+    <div className="flex flex-col lg:flex-row items-stretch lg:items-end justify-between gap-3 my-4 min-w-0">
 
-  {/* RIGHT */}
-  <div className="flex flex-row items-center gap-2 sm:gap-3 lg:gap-4 min-w-0">
-    
-    {/* SEARCH */}
-    <div className="flex flex-row items-center gap-4 bg-white rounded-lg p-2 min-w-0 flex-1 lg:flex-initial lg:min-w-[240px]">
-      <Search className="w-4 h-4 shrink-0" />
-      <Input
-        type="text"
-        placeholder="Search the series, movies..."
-        className="w-full min-w-0 border-none outline-none text-sm"
-      />
-      <Filter className="w-4 h-4 shrink-0" />
-    </div>
+      {/* LEFT */}
+      <div className="flex flex-row items-center gap-2 min-w-0">
+        <SidebarTrigger className="lg:hidden shrink-0" />
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate">
+          {title}
+        </h1>
+      </div>
 
-    {/* NOTIFICATION */}
-    <Image
-      src="/icons/notification.svg"
-      alt="Notification"
-      width={24}
-      height={24}
-      className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7"
-    />
+      {/* RIGHT */}
+      <div className="flex flex-row items-center gap-2 sm:gap-3 lg:gap-4 min-w-0">
 
-    {/* AVATAR + MENU */}
-    <div className="relative shrink-0" ref={menuRef}>
-      <button
-        type="button"
-        onClick={(e) => {
-          e.stopPropagation();
-          setIsUserMenuOpen((prev) => !prev);
-        }}
-        className="relative h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 rounded-full overflow-hidden border-2 border-red"
-        aria-expanded={isUserMenuOpen}
-        aria-haspopup="true"
-      >
-        <Image src="/images/dummy-user.jpg" alt="User" fill className="object-cover" />
-      </button>
+        {/* SEARCH */}
+        <div className="flex items-center bg-white gap-3 rounded-xl px-5 py-3 min-w-[320px] sm:min-w-[380px] flex-1 lg:min-w-[420px] lg:max-w-2xl">
+          {/* Search Icon */}
+          <Image src="/icons/search-icon.svg" alt="Search" width={24} height={24} className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7" />
 
-      {isUserMenuOpen && (
-        <div
-          className="absolute right-0 top-full mt-2 w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg z-50"
-          role="menu"
-        >
-          <Link
-            href="/settings"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            role="menuitem"
-            onClick={() => setIsUserMenuOpen(false)}
-          >
-            Settings
-          </Link>
-          <Link
-            href="/subscription"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            role="menuitem"
-            onClick={() => setIsUserMenuOpen(false)}
-          >
-            Subscription
-          </Link>
+          {/* Input */}
+          <input
+            type="text"
+            placeholder="Search the series, movies ..."
+            className="flex-1 bg-transparent outline-none border-none text-gray-600 placeholder-gray-500 text-lg"
+          />
+
+          {/* Filter Icon */}
+          <Image src="/icons/filter-icon.svg" alt="Search" width={24} height={24} className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7" />
+        </div>
+
+
+        {/* NOTIFICATION */}
+        <Image
+          src="/icons/notification.svg"
+          alt="Notification"
+          width={24}
+          height={24}
+          className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7"
+        />
+
+        {/* AVATAR + MENU */}
+        <div className="relative shrink-0" ref={menuRef}>
           <button
             type="button"
-            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            role="menuitem"
-            onClick={() => {
-              setIsUserMenuOpen(false)
-              router.push("/login")
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsUserMenuOpen((prev) => !prev);
             }}
+            className="relative h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 rounded-full overflow-hidden border-2 border-red"
+            aria-expanded={isUserMenuOpen}
+            aria-haspopup="true"
           >
-            Sign out
+            <Image src="/images/dummy-user.jpg" alt="User" fill className="object-cover" />
           </button>
+
+          {isUserMenuOpen && (
+            <div
+              className="absolute right-0 top-full mt-2 w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg z-50"
+              role="menu"
+            >
+              <Link
+                href="/settings"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={() => setIsUserMenuOpen(false)}
+              >
+                Settings
+              </Link>
+              <Link
+                href="/subscription"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={() => setIsUserMenuOpen(false)}
+              >
+                Subscription
+              </Link>
+              <button
+                type="button"
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={() => {
+                  setIsUserMenuOpen(false)
+                  router.push("/login")
+                }}
+              >
+                Sign out
+              </button>
+            </div>
+          )}
         </div>
-      )}
+
+      </div>
     </div>
 
-  </div>
-</div>
-
-    )
+  )
 }
 
 export default Header

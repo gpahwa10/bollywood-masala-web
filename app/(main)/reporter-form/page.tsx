@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import countries from "country-list-with-dial-code-and-flag";
 const page = () => {
+    const countryList = countries.getAll();
     return (
         <div className='flex flex-col gap-2 sm:gap-3 min-w-0'>
             <h1 className='text-xl sm:text-2xl font-bold'>Reporter Details</h1>
@@ -19,11 +21,24 @@ const page = () => {
                         </div>
                         <div className='flex flex-col gap-1 flex-1'>
                             <h1 className='text-lg font-medium'>Phone Number</h1>
-                            <input
-                                type="tel"
-                                placeholder="1234567890"
-                                className="w-full bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
-                            />
+                            <div className="flex flex-row gap-2">
+                                <select
+                                    name="countryCode"
+                                    className="bg-white text-2xl sm:text-3xl rounded-[8px] border border-[#19191926] outline-none focus:border-primary font-sans font-semibold text-[#191919] transition-colors min-w-0 w-14 sm:w-16 shrink-0 cursor-pointer"
+                                >
+                                    {countryList.map((country) => (
+                                        <option key={country.code} value={country.dial_code}>
+                                            {country.flag}
+                                        </option>
+                                    ))}
+                                </select>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="1234567890"
+                                    className="flex-1 min-w-0 bg-white rounded-[8px] border border-[#19191926] p-3 sm:p-4 outline-none focus:border-primary placeholder:font-sans placeholder:font-normal placeholder:text-lg placeholder:leading-[1.5] placeholder:text-[#666666] text-[#191919] font-semibold transition-colors"
+                                />
+                            </div>
                         </div>
                     </div>
                     <div className='flex flex-col md:flex-row gap-3 sm:gap-4 mb-4 min-w-0 gap-4 mb-4'>
