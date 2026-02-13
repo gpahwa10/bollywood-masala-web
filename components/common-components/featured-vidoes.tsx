@@ -57,35 +57,34 @@ const FEATURED_VIDEOS: Array<{
 
 export default function FeaturedVideos() {
   return (
-    <div className="min-w-0 overflow-hidden">
-      <div className="flex flex-row items-center justify-between min-w-0 gap-4">
-        <h2 className="text-xl sm:text-2xl font-bold text-black shrink-0">
+    <div className="w-full overflow-hidden">
+      <div className="flex items-center justify-between gap-4">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-black">
           Featured videos
         </h2>
+
         <Link
           href="/"
-          className="flex flex-row items-center gap-1 text-sm sm:text-base text-[#666666] hover:text-primary transition-colors shrink-0"
+          className="flex items-center gap-1 text-sm sm:text-base text-[#666666] hover:text-primary transition-colors"
         >
           View All
-          <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 text-primary shrink-0" />
+          <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
         </Link>
       </div>
-      <ul className="list-none p-0 m-0 flex flex-row flex-nowrap gap-3 sm:gap-4 mt-3 sm:mt-4 overflow-x-auto min-w-0 pb-1 mb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+
+      <ul
+        className="list-none p-0 m-0 mt-4 mb-6 flex flex-nowrap gap-3 overflow-x-auto pb-1 min-w-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
         {FEATURED_VIDEOS.map((video) => (
-          <li key={video.id} className="shrink-0">
-            <FeaturedVideoCard
-              title={video.title}
-              category={video.category}
-              thumbnail={video.thumbnail}
-              videoCount={video.videoCount}
-              isSelected={video.isSelected}
-            />
+          <li key={video.id} className="shrink-0 min-w-[160px] sm:min-w-[180px] md:min-w-[200px]">
+            <FeaturedVideoCard {...video} />
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
 
 type FeaturedVideoCardProps = {
   title: string;
@@ -105,40 +104,43 @@ function FeaturedVideoCard({
   return (
     <article
       className={`
-        relative w-[180px] sm:w-[200px] md:w-[240px] aspect-video rounded-xl overflow-hidden
+        relative w-full aspect-video rounded-xl overflow-hidden
         ${isSelected ? "ring-2 ring-blue-500 ring-offset-2 ring-offset-[#EFEFEF]" : ""}
       `}
     >
       <Image
         src={thumbnail}
-        alt=""
+        alt={title}
         fill
         className="object-cover"
-        sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, 240px"
+        sizes="(max-width: 640px) 50vw,
+               (max-width: 1024px) 33vw,
+               20vw"
       />
-      {/* Bottom gradient overlay */}
-      <div
-        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-        aria-hidden
-      />
-      {/* Video count badge - top left */}
+
+      {/* Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+      {/* Badge */}
       {videoCount != null && videoCount > 0 && (
-        <div className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-black/60 px-2 py-1 text-xs font-medium text-white">
+        <div className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-black/60 px-2 py-1 text-[10px] sm:text-xs font-medium text-white">
           <Play className="h-3 w-3 fill-current" />
-          <span>{videoCount} video</span>
+          <span>
+            {videoCount} {videoCount > 1 ? "videos" : "video"}
+          </span>
         </div>
       )}
-      {/* Text overlay - bottom */}
-      <div
-        className="absolute bottom-0 left-0 right-0 p-3 text-white backdrop-blur-[16px] bg-[#0000001A]"
-      >
-        <p className="font-bold text-center text-sm sm:text-base leading-tight truncate">
+
+      {/* Text */}
+      <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 text-white backdrop-blur-md bg-black/20">
+        <p className="font-semibold text-center text-xs sm:text-sm md:text-base truncate">
           {title}
         </p>
-        <p className="text-xs sm:text-sm text-white/80 text-center mt-0.5 truncate">
+        <p className="text-[11px] sm:text-xs md:text-sm text-white/80 text-center truncate">
           {category}
         </p>
       </div>
     </article>
   );
 }
+

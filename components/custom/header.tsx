@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useParams, usePathname, useRouter } from 'next/navigation'
 import { getCategoryById } from '@/lib/categories'
+import { SidebarTrigger } from '@/components/ui/sidebar'
 
 const routeTitleMap: Record<string, string> = {
   "/": "Home",
@@ -43,20 +44,21 @@ const Header = () => {
   }, [isUserMenuOpen]);
 
   return (
-    <div className="flex flex-col lg:flex-row items-stretch lg:items-end justify-between gap-3 my-4 min-w-0">
+    <div className="flex flex-col lg:flex-row items-stretch lg:items-end justify-between gap-3 my-4 min-w-0 w-full overflow-hidden">
 
-      {/* LEFT */}
-      <div className="flex flex-row items-center gap-2 min-w-0">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate">
+      {/* LEFT: hamburger (mobile) + title */}
+      <div className="flex flex-row items-center gap-2 min-w-0 flex-1">
+        <SidebarTrigger className="lg:hidden shrink-0 size-9 flex items-center justify-center" />
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold truncate min-w-0">
           {title}
         </h1>
       </div>
 
       {/* RIGHT */}
-      <div className="flex flex-row items-center gap-2 sm:gap-3 lg:gap-4 min-w-0">
+      <div className="flex flex-row items-center gap-2 sm:gap-3 lg:gap-4 min-w-0 shrink-0 flex-wrap sm:flex-nowrap">
 
         {/* SEARCH */}
-        <div className="flex items-center bg-white gap-3 rounded-xl px-5 py-3 min-w-[320px] sm:min-w-[380px] flex-1 lg:min-w-[420px] lg:max-w-2xl">
+        <div className="flex items-center bg-white gap-2 sm:gap-3 rounded-xl px-3 sm:px-5 py-2.5 sm:py-3 min-w-0 w-full sm:w-auto sm:min-w-[200px] lg:min-w-[320px] lg:max-w-2xl flex-1 sm:flex-initial">
           {/* Search Icon */}
           <Image src="/icons/search-icon.svg" alt="Search" width={24} height={24} className="object-contain shrink-0 w-6 h-6 sm:w-7 sm:h-7" />
 
@@ -64,7 +66,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search the series, movies ..."
-            className="flex-1 bg-transparent outline-none border-none text-gray-600 placeholder-gray-500 text-lg"
+            className="flex-1 min-w-0 bg-transparent outline-none border-none text-gray-600 placeholder-gray-500 text-sm sm:text-lg"
           />
 
           {/* Filter Icon */}
